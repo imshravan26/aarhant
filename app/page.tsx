@@ -4,19 +4,23 @@ import { BackgroundGradientAnimation } from "../components/ui/background-gradien
 
 export default function Home() {
   return (
-    <div>
-      <BackgroundGradientAnimation>
-        <div>
-          <section>
-            <Header />
-          </section>
-          {/* Hero Section */}
-          <section>
-            <Hero />
-          </section>
-        </div>
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Background - positioned absolutely to cover entire viewport */}
+      <div className="fixed inset-0 w-full h-full -z-10">
+        <BackgroundGradientAnimation />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full">
+        <section>
+          <Header />
+        </section>
+
         {/* Hero Section */}
-      </BackgroundGradientAnimation>
+        <section className="flex justify-center items-center mt-10">
+          <Hero />
+        </section>
+      </div>
     </div>
   );
 }

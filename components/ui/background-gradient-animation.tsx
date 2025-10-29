@@ -170,7 +170,7 @@ export const BackgroundGradientAnimation = ({
             onMouseMove={handleMouseMove}
             className={cn(
               `absolute [background:radial-gradient(circle_at_center,_rgba(var(--pointer-color),_0.8)_0,_rgba(var(--pointer-color),_0)_50%)_no-repeat]`,
-              `[mix-blend-mode:var(--blending-value)] w-full h-full -top-1/2 -left-1/2`,
+              `[mix-blend-mode:var(--blending-value)] w-full h-full -top-1/2ero -left-1/2`,
               `opacity-70`
             )}
           ></div>
